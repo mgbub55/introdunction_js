@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --base-color: white;
+  --text-color: #000;
+  --line-color: #dddddd;
+}
+
+html {
+  font-family: Poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-color: var(--base-color);
+  color: var(--text-color);
+}
+
+.container {
+  margin: 50px auto;
+  width: min(25em, 100%);
+  border: 1px solid var(--line-color);
+  padding: 1em 2em;
+  border-radius: 1em;
+  transition: 200ms ease;
+}
+
+.readmore-button {
+  padding: 0;
+  background: none;
+  border: none;
+  font: inherit; 
+  cursor: pointer;
+}
+.readmore-button:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="app.js" defer></script>
+    <style>
+        #todo-container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        #todo-input {
+            width: 70%;
+            padding: 10px;
+            margin-right: 10px;
+        }
+
+        #add-todo {
+            padding: 10px 20px;
+        }
+
+        #todo-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #todo-list li {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        .app {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="app">Todo List</h1>
+    <div id="todo-container">
+        <input type="text" id="todo-input" placeholder="Add a new todo">
+        <button id="add-todo">Add</button>
+        <ul id="todo-list"></ul>
+    </div>
+</body>
+</html>

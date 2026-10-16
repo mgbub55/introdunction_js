@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Readmore Button</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .container p{
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 4;
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .expanded p {
+      -webkit-line-clamp: unset;
+    }
+    
+    .container:not(.expanded) p::after {
+      content: '';
+      height: 2em;
+      width: 100%;
+      background: linear-gradient(transparent, white);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Small Container</h2>
+    <div class="content-wrapper" id="text-container">
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure nemo minima accusamus. Quas vel reiciendis reprehenderit quasi facere consectetur voluptatibus? Sequi qui veritatis earum sunt voluptatum illum nobis labore quam. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+      </p>
+    </div>
+    <button onclick="toggleContainer(this)" class="readmore-button">Read More</button>
+  </div>
+
+  <div class="container">
+    <h2>Medium Container</h2>
+    <div class="content-wrapper" id="text-container">
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure nemo minima accusamus. Quas vel reiciendis reprehenderit quasi facere consectetur voluptatibus? Sequi qui veritatis earum sunt voluptatum illum nobis labore quam.
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores, neque aperiam. Officiis ducimus possimus tenetur maxime. Corrupti facilis iusto ad aspernatur magnam reprehenderit minima cum quo maxime, eum praesentium! Pariatur.
+      </p>
+    </div>
+    <button onclick="toggleContainer(this)" class="readmore-button">Read More</button>
+  </div>
+
+  <div class="container">
+    <h2>Large Container</h2>
+    <div class="content-wrapper" id="text-container">
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure nemo minima accusamus. Quas vel reiciendis reprehenderit quasi facere consectetur voluptatibus? Sequi qui veritatis earum sunt voluptatum illum nobis labore quam.
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores, neque aperiam. Officiis ducimus possimus tenetur maxime. Corrupti facilis iusto ad aspernatur magnam reprehenderit minima cum quo maxime, eum praesentium! Pariatur, quasi tempora eos hic similique deleniti dignissimos natus dicta quos, earum, obcaecati voluptates corrupti sunt? Consequatur saepe reprehenderit perferendis reiciendis?
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores, neque aperiam. Officiis ducimus possimus tenetur maxime. Corrupti facilis iusto ad aspernatur magnam reprehenderit minima cum quo maxime, eum praesentium! Pariatur, quasi tempora eos hic similique deleniti dignissimos natus dicta quos, earum, obcaecati voluptates corrupti sunt? Consequatur saepe reprehenderit perferendis reiciendis?
+      </p>
+    </div>
+    <button onclick="toggleContainer(this)" class="readmore-button">Read More</button>
+  </div>
+
+  <script>
+    function toggleContainer(button) {
+      const container = button.closest('.container');
+      const expanded = container.classList.toggle('expanded');
+      button.innerText = expanded ? "Read Less" : "Read More";
+    }
+  </script>
+</body>
+</html>

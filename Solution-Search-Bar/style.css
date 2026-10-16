@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --base-color: #fff;
+  --text-color: #000;
+  --secondary-color: #b6b6b6;
+  --brand-color: #7146ff;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+html{
+  font-family: Poppins;
+  font-size: 14pt;
+}
+body{
+  min-height: 100vh;
+  padding-top: 100px;
+  padding-bottom: 200px;
+
+  display: flex;
+  flex-direction: column;
+}
+nav{
+  position: fixed;
+  background-color: var(--base-color);
+  width: 100%;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  display: flex;
+  gap: 50px;
+  padding: 20px 50px;
+  border-bottom: 1px solid var(--secondary-color);
+}
+nav .logo{
+  margin-right: auto;
+}
+nav a{
+  text-decoration: none;
+  color: #585a63;
+}
+
+.search-bar {
+  margin: 3em auto 2em;
+  border: 2px solid var(--secondary-color);
+  border-radius: 1000px;
+  height: max-content;
+  display: flex;
+  position: relative;
+}
+
+.search-bar input {
+  width: min(30em, 80vw);
+  padding: 1em 2em 1em 3.25em;
+  border: none;
+  border-radius: 1000px;
+  font: inherit;
+}
+
+.search-bar input:focus {
+  outline: none;
+}
+
+.search-bar:has(input:focus) {
+  border-color: var(--brand-color);
+}
+
+.search-bar svg {
+  position: absolute;
+  top: 50%;
+  left: 1em;
+  translate: 0 -50%;
+}
+
+.products-list{
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  row-gap: 40px;
+}
+.product{
+  text-align: center;
+}
+.product p{
+  max-width: 300px;
+  font-weight: 600;
+}
+.product img{
+  border-radius: 10px;
+}
